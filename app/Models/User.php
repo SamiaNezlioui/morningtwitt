@@ -17,6 +17,7 @@ class User extends Authenticatable
      *
      * @var string[]
      */
+    //ls champs rmplissable qu on peut accepter
     protected $fillable = [
         'nom',
         'email',
@@ -31,6 +32,8 @@ class User extends Authenticatable
      *
      * @var array
      */
+    //les champs confidentiel 
+
     protected $hidden = [
         'password',
         'remember_token',
@@ -46,14 +49,14 @@ class User extends Authenticatable
     ];
 
     public function role(){
-        return $this->hasOne('app\models\Role');
+        return $this->hasOne('app\Models\Role');
     }
 
-    public function quacks(){
-        return $this->hasMany('app\models\Quack');
+    public function tweets(){
+        return $this->hasMany('app\Models\Tweet');
     }
 
     public function comments(){
-        return $this->hasMany('app\models\Comment');
+        return $this->hasMany('app\Models\Comment');//un user peu poster un commentaires ou plusieur commentaires
     }
 }

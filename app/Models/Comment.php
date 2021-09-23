@@ -9,10 +9,12 @@ class Comment extends Model
 {
     use HasFactory;
 
-    public function quack(){
-        return $this->belongsTo('app\models\Quack');
+// definir la relation de cardinalité
+
+    public function tweet(){
+        return $this->belongsTo('app\Models\Tweet');//un a un belongTo / $this fait reference a la classe elle même
     }
     public function user(){
-        return $this->belongsTo('app\models\user');
+        return $this->belongsTo('app\Models\User');
     }
 }
