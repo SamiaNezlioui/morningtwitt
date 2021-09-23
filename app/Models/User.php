@@ -18,9 +18,12 @@ class User extends Authenticatable
      * @var string[]
      */
     protected $fillable = [
-        'name',
+        'nom',
         'email',
         'password',
+        'pseudo',
+        'prenom',
+        'image',
     ];
 
     /**
@@ -41,4 +44,16 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function role(){
+        return $this->hasOne('app\models\Role');
+    }
+
+    public function quacks(){
+        return $this->hasMany('app\models\Quack');
+    }
+
+    public function comments(){
+        return $this->hasMany('app\models\Comment');
+    }
 }
