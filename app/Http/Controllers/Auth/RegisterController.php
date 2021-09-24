@@ -56,7 +56,6 @@ class RegisterController extends Controller
             'password' => ['required', 'string', 'min:8', 'confirmed'],
             'pseudo' => ['required', 'string' , 'max:30','unique:users'],
             'prenom' => ['required', 'string', 'max:20'],
-            'image' => [''],
         ]);
     }
 

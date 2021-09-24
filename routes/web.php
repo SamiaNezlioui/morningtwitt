@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +25,8 @@ Route::get('/profil',[App\Http\Controllers\HomeController::class, 'index'])->nam
 Route::get('/comment',[App\Http\Controllers\HomeController::class, 'index'])->name('comment');
 Route::get('/quack',[App\Http\Controllers\HomeController::class, 'index'])->name('quack');
 
-Route::resource('/user', App\Htttp\Controllers\HomeController::class)->except('create');
+Route::resource('/user', App\Http\Controllers\UserController::class)->except('create','index','store');
+
+Route::put('/user/updatepassword/{user}',[App\Http\Controllers\UserController::class,'updatepassword'])->name('updatepassword');//'updatepassword' la fonction du controlleur
 
 

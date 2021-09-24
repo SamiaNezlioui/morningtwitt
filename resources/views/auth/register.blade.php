@@ -70,10 +70,10 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="image" class="col-md-4 col-form-label text-md-right">{{ __('image') }}</label>
+                            <label for="image" class="col-md-4 col-form-label text-md-right"> {{ __('image') }}</label>
 
                             <div class="col-md-6">
-                                <input id="image" type="text" class="form-control @error('image') is-invalid @enderror" name="image" value="{{ old('image') }}" required autocomplete="image">
+                                <input id="image" type="text" class="form-control @error('image') is-invalid @enderror" name="image" value="{{ old('image') }}" autocomplete="image">
 
                                 @error('image')
                                     <span class="invalid-feedback" role="alert">
@@ -82,11 +82,6 @@
                                 @enderror
                             </div>
                         </div>
-
-
-
-
-
 
                         <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
