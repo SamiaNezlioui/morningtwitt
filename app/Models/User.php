@@ -59,4 +59,10 @@ class User extends Authenticatable
     public function comments(){
         return $this->hasMany('app\Models\Comment');//un user peu poster un commentaires ou plusieur commentaires
     }
+
+    public function isAdmin(){
+         if($this->role_id === 2){
+             return true;
+         }
+    }
 }

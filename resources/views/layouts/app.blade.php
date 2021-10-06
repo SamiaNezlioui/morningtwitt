@@ -6,14 +6,13 @@
     <meta charset="utf-8">
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
     <script src="/js/app.js"></script>
-    <link rel="icon" href="{{ asset("images/duck.png") }}">
 </head>
 
 <header class="text-center">
-    <nav class="navbar navbar-expand-md navbar-light bg-warning shadow-sm mb-5">
+    <nav class="navbar navbar-expand-md navbar-dark bg-black shadow-sm mb-5">
         <div class="container">
-            <a class="navbar-brand ml-2" href="{{ url('/home') }}"><img style="height: 40px; width: 40px;" src="{{ asset("images/duck.png") }}" alt="logo">
-                QuackNet
+          <!--  <a class="navbar-brand ml-2" href="{{ url('/home') }}"><img style="height: 40px; width: 40px;" src="{{ asset("public/images/logo.jpg") }}" alt="logo"> -->
+                MorningTweet
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                 <span class="navbar-toggler-icon"></span>
@@ -38,7 +37,7 @@
                     @else
                     <li class="nav-item dropdown mr-4">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                            {{ Auth::user()->duckname }} <span class="caret"></span>
+                            {{ Auth::user()->nom}} <span class="caret"></span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                            
@@ -92,8 +91,8 @@
 
 </body>
 
-<footer class="text-center bg-warning p-5 mt-5">
-    <p>© QuackNet 2020 - codé par des canards pour des canards</p>
+<footer class="text-center bg-primary p-5 ">
+    <p>© Morninigtweet 2021</p>
 </footer>
 
 </html>

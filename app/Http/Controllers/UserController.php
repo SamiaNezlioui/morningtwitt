@@ -12,9 +12,10 @@ class UserController extends Controller
 {
 
     // pour afficher une ressource (profil) un user 
-    public function show($id)
+    public function profil(User $user)
     {
-        //
+        $user->load('tweets'); //load pour charger les informations mais pas le fichier
+        return view('user/edit', compact('user'));
     }
 
     /**

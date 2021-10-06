@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Comment extends Model
 {
     use HasFactory;
+    protected $fillable = ['content','tags','image','_token'];
 
 // definir la relation de cardinalité
 

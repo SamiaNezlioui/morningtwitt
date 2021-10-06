@@ -33,6 +33,8 @@ class LoginController extends Controller
      *
      * @return void
      */
+
+    ///le formulaire connection seul les visiteur peuvent le voir et se connnecter une fois deconnecter
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
